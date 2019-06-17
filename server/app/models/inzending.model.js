@@ -9,4 +9,4 @@ const InzendingSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('Book', InzendingSchema);
+module.exports = mongoose.model('Inzending', InzendingSchema, 'inzendingen');

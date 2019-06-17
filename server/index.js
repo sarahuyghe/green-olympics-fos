@@ -7,7 +7,8 @@ require('dotenv').config();
 mongoose
   .connect(process.env.DB_URL, {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useCreateIndex: true
   })
   .then(() => console.log('db connected'))
   .catch(e => {
