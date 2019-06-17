@@ -4,10 +4,10 @@ exports.create = (req, res) => {
   if (!req.body.opdracht) {
     return res.status(500).send({err: 'title can not be empty'});
   }
-
   const inzending = new Inzending({
-    opdracht: req.body.opdracht
-    // authorId: req.body.authorId
+    opdracht: req.body.opdracht,
+    link: req.body.link,
+    scouts: req.body.scouts
   });
 
   inzending
@@ -52,8 +52,9 @@ exports.update = async (req, res) => {
     const inzending = await Inzending.findByIdAndUpdate(
       req.params.bookId,
       {
-        opdracht: req.body.title
-        // authorId: req.body.authorId
+        opdracht: req.body.title,
+        link: req.body.link,
+        scouts: req.body.scouts
       },
       {
         new: true

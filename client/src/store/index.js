@@ -9,21 +9,24 @@ class Store {
 	constructor() {
 		this.api = new Api();
 		this.api.getAll().then(d => d.forEach(this._addInzending));
-		// fetch("http://localhost:4000/inzendingen")
-		// 	.then(r => r.json())
-		// 	.then(inzendingen => inzendingen.forEach(this._addInzending));
 	}
 
 	addInzending = inzending => {
-		const newInzending = new Inzending(inzending.opdracht);
+		console.log(inzending.opdracht);
+		const newInzending = new Inzending(
+			inzending.opdracht,
+			inzending.link,
+			inzending.scouts
+		);
+		console.log(newInzending);
 		this.inzendingen.push(newInzending);
 		this.api
 			.create(newInzending)
 			.then(inzendingValues => newInzending.updateFromServer(inzendingValues));
 	};
 
-	_addInzending = ({ opdracht, id }) => {
-		const inzending = new Inzending(opdracht, id);
+	_addInzending = ({ id, opdracht, link, scouts }) => {
+		const inzending = new Inzending(opdracht, link, scouts, id);
 		runInAction(() => this.inzendingen.push(inzending));
 	};
 }

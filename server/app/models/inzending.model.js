@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 
 const InzendingSchema = mongoose.Schema(
   {
-    opdracht: String
+    opdracht: String,
+    link: String,
+    scouts: String
   },
   {
     timestamps: true

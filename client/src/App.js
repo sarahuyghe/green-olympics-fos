@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
 
-import List from "./components/Lists";
+import Form from "./components/Form";
+import Inzendingen from "./components/Inzendingen";
 
 function App() {
 	return (
 		<>
-			<h1>Testing scouts</h1>
-			<List />
+			<Inzendingen />
+			<Form />
 		</>
 	);
 }
