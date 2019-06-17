@@ -1,0 +1,31 @@
+{
+  "inzendingen": [
+    {
+      "id": 1,
+      "opdracht": "Alles ok"
+    },
+    {
+      "opdracht": "Alles nog beter",
+      "id": 2
+    },
+    {
+      "opdracht": "wajo server side",
+      "id": 3
+    },
+    {
+      "opdracht": "testing",
+      "id": 4
+    },
+    {
+      "opdracht": "heheh",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "opdracht": "kekek",
+      "id": 7
+    }
+  ]
+}
