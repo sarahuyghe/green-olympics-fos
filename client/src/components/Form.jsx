@@ -2,6 +2,7 @@ import React from "react";
 import { inject, observer } from "mobx-react";
 
 const Form = ({ store }) => {
+	console.log("testing");
 	const opdrachtInput = React.createRef();
 	const linkInput = React.createRef();
 	const scoutsInput = React.createRef();

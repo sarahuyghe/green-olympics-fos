@@ -12,13 +12,11 @@ class Store {
 	}
 
 	addInzending = inzending => {
-		console.log(inzending.opdracht);
 		const newInzending = new Inzending(
 			inzending.opdracht,
 			inzending.link,
 			inzending.scouts
 		);
-		console.log(newInzending);
 		this.inzendingen.push(newInzending);
 		this.api
 			.create(newInzending)

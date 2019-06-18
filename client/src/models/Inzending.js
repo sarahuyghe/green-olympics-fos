@@ -3,9 +3,6 @@ import { decorate, observable, action, computed } from "mobx";
 
 class Inzending {
 	constructor(opdracht, link, scouts, id = uuid.v4()) {
-		console.log(opdracht);
-		console.log(link);
-		console.log(scouts);
 		this.id = id;
 		this.opdracht = opdracht;
 		this.link = link;
