@@ -2,8 +2,8 @@ import React from "react";
 import { inject, observer } from "mobx-react";
 import ReactPlayer from "react-player";
 
-const Inzendingen = ({ store }) => {
-	const { inzendingen } = store;
+const Inzendingen = ({ inzendingenStore }) => {
+	const { inzendingen } = inzendingenStore;
 	return (
 		<div>
 			<h1>weergeven inzendingen</h1>
@@ -19,4 +19,4 @@ const Inzendingen = ({ store }) => {
 	);
 };
 
-export default inject("store")(observer(Inzendingen));
+export default inject("inzendingenStore")(observer(Inzendingen));

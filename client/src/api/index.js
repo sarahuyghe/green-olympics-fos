@@ -1,12 +1,15 @@
 class Api {
+	constructor(entity) {
+		this.entity = entity;
+	}
 	getAll = async () => {
-		const r = await fetch("http://localhost:4000/inzendingen");
+		const r = await fetch(`/api/${this.entity}`);
 		return await r.json();
 	};
 
 	create = async inzending => {
 		const r = await fetch(
-			"http://localhost:4000/inzendingen",
+			`/api/${this.entity}`,
 			this.getOptions("post", inzending.values)
 		);
 		return await r.json();
@@ -14,7 +17,7 @@ class Api {
 
 	update = async inzending => {
 		const r = await fetch(
-			`http://localhost:4000/inzendingen/${inzending.id}`,
+			`/api/${this.entity}/${inzending.id}`,
 			this.getOptions("put", inzending.values)
 		);
 		return await r.json();
@@ -22,7 +25,7 @@ class Api {
 
 	delete = async inzending => {
 		const r = await fetch(
-			`http://localhost:4000/inzendingen/${inzending.id}`,
+			`/api/${this.entity}/${inzending.id}`,
 			this.getOptions("delete")
 		);
 		return r.json();

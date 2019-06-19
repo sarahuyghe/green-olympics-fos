@@ -1,8 +1,7 @@
 import React from "react";
 import { inject, observer } from "mobx-react";
 
-const Form = ({ store }) => {
-	console.log("testing");
+const Form = ({ inzendingenStore }) => {
 	const opdrachtInput = React.createRef();
 	const linkInput = React.createRef();
 	const scoutsInput = React.createRef();
@@ -10,7 +9,7 @@ const Form = ({ store }) => {
 	const handleSubmit = e => {
 		e.preventDefault();
 
-		store.addInzending({
+		inzendingenStore.addInzending({
 			opdracht: opdrachtInput.current.value,
 			link: linkInput.current.value,
 			scouts: scoutsInput.current.value
@@ -41,4 +40,4 @@ const Form = ({ store }) => {
 	);
 };
 
-export default inject("store")(observer(Form));
+export default inject("inzendingenStore")(observer(Form));
