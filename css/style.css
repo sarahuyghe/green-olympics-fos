@@ -66,6 +66,7 @@ ALGEMEEN
 body {
 	font-family: 'CircularStd_Regular';
 	font-size: 1.8rem;
+	
 }
 
 main {
@@ -215,7 +216,9 @@ li {
 }
 
 
-
+p {
+	line-height: 18pt;
+}
 .testing img {
 	position: absolute;
 	right: 0%;
@@ -482,6 +485,7 @@ footer {
 	text-align: center;
 	display: flex;
 	align-items: baseline;
+		background-color: #24A666;
 }
 
 .opdrachten h2 {
@@ -515,6 +519,11 @@ footer {
 	border-color: #8D9AE4;
 }
 
+.opdrachten:nth-child(7) .title{
+	background-color: #24A666;
+	border-color: #24A666;
+}
+
 
 .opdrachten:nth-child(1) .allInfo {
 	border-color: #24A666;
@@ -535,6 +544,11 @@ footer {
 .opdrachten:nth-child(6) .allInfo{
 	border-color: #8D9AE4;
 }
+
+.opdrachten:nth-child(7) .allInfo {
+	border-color: #24A666;
+}
+
 
 .allInfo {
 	grid-row: 2 / 4;
@@ -792,7 +806,6 @@ footer {
 	overflow:hidden;
 	background: white;
 	border:0.2rem solid black;
-	margin-bottom: 1.5rem;
 }
 
 select {
@@ -809,7 +822,7 @@ select {
 	color: #979797;
 	margin: 0.5rem 0;
 	width: 655px;
-	height: 40px
+	height: 25px
 }
 
 .form-input{
@@ -849,7 +862,15 @@ select {
 	margin: 1rem;
 	text-decoration: none;
 	color: black;
-	text-align: center;
+	transition: all .5s ease;
+	
+}
+
+.button:hover {
+	background-color: black;
+	color: white;
+	
+	
 }
 
 .button img {
@@ -863,9 +884,4 @@ select {
 iframe {
 	/* border: solid 0.2rem ; */
 	border-radius: 20pt;
-}
-
-
-label {
-	margin-bottom: .5rem;
 }
